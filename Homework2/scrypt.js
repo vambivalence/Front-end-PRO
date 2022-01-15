@@ -1,6 +1,6 @@
 userName = prompt("Как тебя зовут?");
 age = prompt("Какого ты года рождения?");
-alert(userName + " " + ("2022" - age));
+alert(userName + " " + (2022 - age));
 
 const a = Number(prompt("Ширина"));
 console.log(a);
@@ -21,7 +21,7 @@ c % 2 === 0 ? console.log("c is even") : null;
 const average = (a + b + c) / 2;
 console.log(average);
 
-const numeral = Number (46539)
+const numeral = Number (46539);
 console.log(numeral);
 
 let n = 46539;
