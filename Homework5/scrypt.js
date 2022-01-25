@@ -22,17 +22,17 @@ console.log("Среднее арифметическое:", arithmetic (23,512))
 const calcSwitch = function (a, b, action) {
   switch (String(action)) {
     case "+":
-      return a + b;
+      return +a + +b;
     case "-":
-      return a - b;
+      return +a - +b;
     case "*":
-      return a * b;
+      return +a * +b;
     case "/":
-      return a / b;
+      return +a / +b;
     case "%":
-      return a % b;
+      return +a % +b;
     case "^":
-      return a ^ b;
+      return +a ^ +b;
     default:
       console.log("try again");
       break;
