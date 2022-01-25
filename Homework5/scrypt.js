@@ -19,35 +19,48 @@ function arithmetic(first, second){
 
 console.log("Среднее арифметическое:", arithmetic (23,512));  
 
-
-const calc = function (a, b, action) {
-    if (String(action) === "+") {
-      return a + b;
-    } else if (String(action) === "-") {
-      return a - b;
+const calcSwitch = function (a, b, action) {
+  switch (String(action)) {
+    case "+":
+      return add(a, b);
+    case "-":
+      return sub(a, b);
+    case "*":
+      return multi(a, b);
+    case "/":
+      return div(a, b);
+    case "%":
+      return perc(a, b);
+    case "^":
+      return exp(a, b); 
+    default:
+      console.log("try again");
+      break;
     }
-  };
-  
-  console.log(calc(10, 7, "+"));
-  console.log(calc(10, 7, "-"));
-
-  const calcSwitch = function (a, b, action) {
-    switch (String(action)) {
-      case "+":
-        return a + b;
-      case "-":
-        return a - b;
-      default:
-        console.log("try again");
-        break;
+    function add(a, b) {
+      return Number(a) + Number(b);
     }
-    if (String(action) === "+") {
-      return a + b;
-    } else if (String(action) === "-") {
-      return a - b;
+    function sub(a, b) {
+      return Number(a) - Number(b);
+    }
+    function multi(a, b) {
+      return Number(a) * Number(b);
+    }
+    function div(a, b) {
+      return Number(a) / Number(b);
+    }
+    function perc(a, b) {
+      return Number(a) % Number(b);
+    }
+    function exp(a, b) {
+      return Number(a) ^ Number(b);
     }
   };
   
   console.log(calcSwitch(4, 5, "+"));
   console.log(calcSwitch(4, 5, "-"));
+  console.log(calcSwitch(4, 5, "*"));
+  console.log(calcSwitch(4, 5, "/"));
+  console.log(calcSwitch(4, 5, "%"));
+  console.log(calcSwitch(4, 5, "^"));
   console.log(calcSwitch(4, 5, "0"));
