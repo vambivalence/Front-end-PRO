@@ -1,117 +1,130 @@
-//Узнать как в конце убрать запятую
-
 //1.Вывести на страницу в одну строку через запятую числа от 10 до 20
-/**let b = 10; 
-let msg = '';
-while (b <= 20) {
-  msg+= b++  + ', ';  
+let a = 10; 
+let msg = "";
+while (a < 20) {
+  msg+= a + ", "; 
+  a++;
 }
-console.log(msg);**/
+msg += a;
+console.log(msg);
 
 //2.Вывести квадраты чисел от 10 до 20
-
-for (g = 10; g < 21; g++) {
-  console.log(g*g);
-}
-
+ 
+for (b = 10; b <= 20; b++) {
+  console.log(b*b);
+};
 
 //3.Вывести таблицу умножения на 7
 
-/**let output = '';
-for (let e = 7; e <= 7; e++) {
-  for (let k = 1; k <= 10; k++) {
-    output += ' ' + e * k;
-    if (e * k < 7) {
-      output += ' ';
-    }
-  }
-  console.log(output);
-  output = '';
+for (let x = 1; x <= 9; x++) {
+  for (let y = 7; y <= 7; y++)
+    console.log(y + "x" + y + "=" + (y * x));
 }
-
 
 //4.Найти сумму всех целых чисел от 1 до 15
 // нужна ли тут доп проверка на целостность числа
 
-let sum = 1;
-for (let d = 1; d <= 15; d++) {
-  sum += d;
-}
-console.log(sum);**/
-
+let sum = 0;
+for (let v = 0; v <= 15; v++) {
+  sum += v;
+};
+console.log("Сумма чисел от 1 до 15: ", sum );
 
 //5.Найти произведение всех целых чисел от 15 до 35
 
-let work = 1;
-for(s = 15; s <= 35; s++){
-    work *= s;
+let num = 1;
+for(g = 15; g <= 35; g++){
+    num *= g;
 }
-console.log("произведение всех целых чисел от 15 до 35:", work);
-
+console.log("Произведение чисел от 15 до 35:", num);
 
 //6.Найти среднее арифметическое всех целых чисел от 1 до 500
-
-
+let average = 0;
+   for (d = 1; d<= 500; d++) {
+    average += d;
+}
+console.log("Среднее арифметическое чисел от 1 до 500:", average);
 
 //7. Вывести на страницу сумму только четных чисел в диапазоне от 30 до 80
+let z = 0;
+for (let i = 30; i <= 80; i++) {
+    if (i % 2 === 0) {
+        z += i
+    }
+}
+console.log("Сумма четных чисел в диапазоне от 30 до 80: ", z);
 
 //8. Вывести на страницу все числа в диапазоне от 100 до 200 кратные 3
 
-/**let from= 100,
+let from= 100,
     before= 200,
     anser = [];
 
-for(;from<before;from++)
-    if(from % 3 === 0)
-    console.log(from);
-**/
-
-
+for(;from<before;from++) {
+  if(from % 3 === 0){
+    console.log("Числа кратные 3: ", from);
+  }
+};
 
 //9. Дано натуральное число. Найти и вывести на страницу все его делители.
 //а. Определить количество его четных делителей
 //б. Найти сумму его четных делителей
+let count = 0;
+let result = 0;
+for (let div = 1; div <= 42; div++) {
+    if (42 % div == 0) {
+      console.log("Делители переменной: ", div);
 
+        if (div % 2 == 0)
+        {
+            count++;
+            result += div;
+        }
+    }
+}
+console.log("Кол-во четных делителей переменной: ", count);
+console.log("Сумма четных делителей переменной: ", result);
 
 
 //10.Напечатать полную таблицу умножения от 1 до 10
-
-/** let output = '';
-for (let a = 1; a <= 9; a++) {
-  for (let j = 1; j <= 9; j++) {
-    output += ' ' + a * j;
-    if (a * j < 10) {
-      output += ' ';
+let output = "";
+for (let one = 1; one <= 9; one++) {
+  for (let two = 1; two <= 9; two++) {
+    output += " " + one * two;
+    if (one * two < 10) {
+      output += " ";
     }
   }
   console.log(output);
-  output = '';
-} **/
+  output = "";
+};
 
 //11.Игра “Угадай число”. Сгенерировать случайное число в диапазоне от 0 до 10. Пользователь должен угадать число. Игра продолжается до тех пор, пока пользователь не угадает число. Пользователь может остановить игру в любой момент.
+let unknown = Math.floor(Math.random() * 11);
+console.log("Случайное число", unknown);
 
-// как зациклить до момента угадывания?!
-const unk = 4;
-let num = prompt("Угадайте число от 1 до 10");
-num = parseInt(num);
-    
-if(num<unk){clue="Больше"};
-if(num>unk){clue="Меньше"};
-if(num === unk){clue="Угадал"};
-alert(clue);
-
+while (true) {
+  let question = +prompt("Отгадайте случайное число в диапазоне от 0 до 10");
+  if (isNaN(unknown)) {
+    alert("Что-то пошло не так! Введите число:");
+  } else if (question < unknown) {
+    alert("Холодно. Ваше число меньше загаданного");
+  } else if (question > unknown) {
+    alert("Холодно. Ваше число больше загаданного");
+  } else {
+    alert("Гениально!");
+    break;
+  }
+};
 
 //12. Запросить у пользователя число, которое будет высотой вершины прямоугольного треугольника. Вывести треугольник построчно через console.log
-
-
-/** let z = 0, q = 0;
+let three = 0, four = 0;
 let max ;
 trian = "";
-height = +prompt('Введите число, которое будет высотой вершины треугольника')
+height = +prompt("Введите число, которое будет высотой вершины треугольника");
  
-while (z < height) {
-    for (q = 0; q < z + 1; q++) trian += "*";
+while (three < height) {
+    for (four = 0; four < three + 1; four++) trian += "*";
     console.log(trian);
-    z++;
-}
-**/
+    three++;
+};
