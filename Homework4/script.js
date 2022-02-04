@@ -103,23 +103,22 @@ let unknown = Math.floor(Math.random() * 11);
 console.log("Случайное число: ", unknown);
 
 while (true) {
-  let question = +prompt("Отгадайте случайное число в диапазоне от 0 до 10");
+  let question = prompt("Отгадайте случайное число в диапазоне от 0 до 10");
   if (!question) {
     alert("Ну и ладно ¯\_(ツ)_/¯");
     break;
   };
   if(isNaN(unknown)) {
     alert("Что-то пошло не так! Введите число:");
-  } else if (question < unknown) {
+  } else if (+question < unknown) {
     alert("Холодно. Ваше число меньше загаданного");
-  } else if (question > unknown) {
+  } else if (+question > unknown) {
     alert("Холодно. Ваше число больше загаданного");
   } else {
     alert("Гениально!");
     break;
   }
 };
-
 //12. Запросить у пользователя число, которое будет высотой вершины прямоугольного треугольника. Вывести треугольник построчно через console.log
 let three = 0, four = 0;
 let max ;
