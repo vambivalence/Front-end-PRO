@@ -37,7 +37,7 @@ const calcSwitch = function (a, b, action) {
       console.log("try again");
       break;
     }
-  };
+  }
   
   console.log(calcSwitch(4, 5, "+"));
   console.log(calcSwitch(4, 5, "-"));
