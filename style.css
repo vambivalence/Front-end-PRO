@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1400px;
+    height: 700px;
+    background-color:  rgb(240, 243, 49);
+    color: rgb(13, 43, 99);
+}
+
+.span{
+    display: flex;
+    font-size: 100px;
+}
+
+.min,
+.sec{
+    margin-left: 10px;
+}
+
+.min {
+    color: rgb(56, 112, 196);
+}
+
+.sec {
+    color: rgb(146, 161, 245);
+}
